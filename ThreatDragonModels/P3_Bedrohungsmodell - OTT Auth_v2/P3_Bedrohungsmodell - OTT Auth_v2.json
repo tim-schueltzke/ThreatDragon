@@ -1636,11 +1636,11 @@
               "threats": [
                 {
                   "id": "e16b2562-7da6-4c4d-9259-ae3e3da4288f",
-                  "title": "Informationsverlust",
+                  "title": "Informationsdiebstahl",
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Information disclosure",
-                  "description": "Ein Angreifer könnte unbefugten Zugang zu den monatlich erstellten Exportberichten erhalten und dadurch Zugriff auf sensible Unternehmensdaten gewinnen.",
+                  "description": "Ein Angreifer könnte unbefugten Zugang zu den monatlich erstellten Exportberichten erhalten und dadurch Zugriff auf sensible Unternehmensdaten gewinnen.\n\nCAPEC-118: Collect and Analyze Information -- Angreifer verschaffen sich Zugriff auf sensible Daten, indem sie Datenübertragungen oder Speichersysteme ausnutzen, die unzureichend gesichert sind.\n\nMITRE: T1115 - Clipboard Data -- Angreifer kann ohne Rechte in der Zwischenablage Berichte einsehen.",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "STRIDE",
                   "new": false,
