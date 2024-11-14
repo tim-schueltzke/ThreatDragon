@@ -1455,7 +1455,7 @@
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Information disclosure",
-                  "description": "Ein Angreifer könnte hier versuchen, durch schwache Datenbankberechtigungen oder fehlende Verschlüsselung Informationen zu extrahieren. Maßnahmen umfassen verschlüsselte Speicherung und eingeschränkte Zugriffskontrollen",
+                  "description": "Ein Angreifer könnte hier versuchen, durch schwache Datenbankberechtigungen oder fehlende Verschlüsselung Informationen zu extrahieren. Maßnahmen umfassen verschlüsselte Speicherung und eingeschränkte Zugriffskontrollen.\n\nCAPEC-122: Privilege Abuse -- Angreifer nutzen schwache Berechtigungen oder unzureichende Zugriffskontrollen aus, um unautorisiert auf sensible Daten zuzugreifen.\n\nMitre: T1555 - Credentials from Password Stores -- Angreifer versuchen auf ungeschützt oder schwach geschütze Datenbanken zuzugreifen um Daten zu extrahieren.",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "STRIDE",
                   "new": false,
