@@ -103,11 +103,24 @@
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Tampering",
-                  "description": "Provide a description for this threat",
+                  "description": "Ein Angreifer könnte manipulierte Weiterleitungen in der Webanwendung einfügen, um Benutzer auf schädliche Seiten umzuleiten\n\nCAPEC-34 - \"HTTP Response Splitting\" (könnte verwendet werden, um die Weiterleitungen zu manipulieren).\n\nMIRE: T1437.001 Application Layer Protocol: Web Protocols Angreifer können Webprotokolle wie HTTP und HTTPS verwenden, um unerkannt mit Geräten zu kommunizieren, indem sie den legitimen Datenverkehr nachahmen und so der Erkennung entgehen.",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 104,
+                  "score": ""
+                },
+                {
+                  "id": "eb6ddb77-36e0-4524-b4d6-eb63cfc805a5",
+                  "title": "Claims to have not received",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "Ein Benutzer behaupten könnte, den OTT nicht erhalten zu haben. ",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 109,
                   "score": ""
                 }
               ],
@@ -120,7 +133,7 @@
           {
             "position": {
               "x": 488,
-              "y": -11.999999999999922
+              "y": -11.999999999999943
             },
             "size": {
               "width": 130,
@@ -131,8 +144,8 @@
                 "text": "2-Faktor-Authe\nntifizierungsdi\nenst"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -147,8 +160,22 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "threats": [],
-              "hasOpenThreats": false,
+              "threats": [
+                {
+                  "id": "7e2b9559-ac62-462f-abe2-bf6987459450",
+                  "title": "Spoofing von Nutzeridentitäten",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "Ein Angreifer könnte sich als legitimer Benutzer ausgeben und versuchen, den OTT (One-Time Token) abzufangen oder zu erraten, um Zugang zu einem Konto zu erhalten.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 112,
+                  "score": ""
+                }
+              ],
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "protocol": "",
               "isEncrypted": false,
@@ -171,8 +198,8 @@
                 "text": "Telefonnummer-\nAPI-Gateway"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -187,22 +214,11 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "threats": [
-                {
-                  "id": "6f570566-2900-40aa-8e7b-6d14fa9db1f5",
-                  "title": "",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "Repudiation",
-                  "description": "Provide a description for this threat",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": true,
-                  "number": 0,
-                  "score": ""
-                }
-              ],
-              "hasOpenThreats": true
+              "threats": [],
+              "hasOpenThreats": false,
+              "handlesCardPayment": null,
+              "handlesGoodsOrServices": null,
+              "isWebApplication": null
             }
           },
           {
@@ -1049,68 +1065,6 @@
             ]
           },
           {
-            "shape": "trust-broundary-curve",
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Boundary",
-              "name": "Externer Service für T\nelefonnummernauflö\nsung",
-              "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false
-            },
-            "id": "8c690a8a-f100-4c4d-bd88-095a530ac220",
-            "labels": [
-              {
-                "position": {
-                  "distance": 0,
-                  "offset": 25.336937022630487
-                },
-                "attrs": {
-                  "label": {
-                    "text": "Firma Allsecure"
-                  }
-                }
-              }
-            ],
-            "source": {
-              "x": 80,
-              "y": 270
-            },
-            "target": {
-              "x": 60,
-              "y": 260
-            },
-            "vertices": [
-              {
-                "x": 690,
-                "y": 90
-              },
-              {
-                "x": 690,
-                "y": -450
-              },
-              {
-                "x": -160,
-                "y": -480
-              },
-              {
-                "x": -160,
-                "y": -30
-              },
-              {
-                "x": -100,
-                "y": 160
-              },
-              {
-                "x": 60,
-                "y": 260
-              }
-            ]
-          },
-          {
             "shape": "flow",
             "attrs": {
               "line": {
@@ -1156,54 +1110,6 @@
             ],
             "labels": [
               "Auslesen von Informationen"
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Reportdaten Senden",
-              "description": "Monatlich",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": true,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "9b60eeab-242c-43f1-8803-db8d409160df",
-            "source": {
-              "cell": "708364eb-dca2-497e-a54a-db95a2610ea5"
-            },
-            "target": {
-              "cell": "ae1b9c13-7f21-41f9-a453-993b8b42a896"
-            },
-            "vertices": [
-              {
-                "x": 410,
-                "y": -390
-              }
-            ],
-            "labels": [
-              "Reportdaten Senden"
             ]
           },
           {
@@ -1351,6 +1257,64 @@
             ]
           },
           {
+            "shape": "trust-broundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Externer Service für T\nelefonnummernauflö\nsung",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "id": "8c690a8a-f100-4c4d-bd88-095a530ac220",
+            "labels": [
+              {
+                "position": {
+                  "distance": 0,
+                  "offset": 25.336937022630487
+                },
+                "attrs": {
+                  "label": {
+                    "text": "Firma Allsecure"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "x": 60,
+              "y": 260
+            },
+            "target": {
+              "x": 60,
+              "y": 260
+            },
+            "vertices": [
+              {
+                "x": 690,
+                "y": 90
+              },
+              {
+                "x": 570,
+                "y": -450
+              },
+              {
+                "x": 20,
+                "y": -450
+              },
+              {
+                "x": -160,
+                "y": -30
+              },
+              {
+                "x": -100,
+                "y": 160
+              }
+            ]
+          },
+          {
             "shape": "flow",
             "attrs": {
               "line": {
@@ -1386,8 +1350,8 @@
               "cell": "48d857ab-4837-4ffa-a9f0-a87d5e5f9ebb"
             },
             "target": {
-              "x": -120,
-              "y": -520
+              "x": 210,
+              "y": -570
             },
             "vertices": [
               {
@@ -1397,6 +1361,52 @@
             ],
             "labels": [
               "E-mail report signiert und verschlüsselt"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "00d84309-c8cf-4c24-8e9d-803a3adc2c7b",
+            "source": {
+              "cell": "708364eb-dca2-497e-a54a-db95a2610ea5"
+            },
+            "target": {
+              "x": 250,
+              "y": -570
+            },
+            "vertices": [
+              {
+                "x": 360,
+                "y": -460
+              }
             ]
           },
           {
@@ -1413,11 +1423,13 @@
                 "text": "Log-DB"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1435,8 +1447,22 @@
               "storesCredentials": false,
               "isEncrypted": true,
               "isSigned": true,
-              "hasOpenThreats": false,
-              "threats": []
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "108836a4-b628-485f-82a5-e7554b553be1",
+                  "title": "Data Stores ",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Ein Angreifer könnte hier versuchen, durch schwache Datenbankberechtigungen oder fehlende Verschlüsselung Informationen zu extrahieren. Maßnahmen umfassen verschlüsselte Speicherung und eingeschränkte Zugriffskontrollen",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 111,
+                  "score": ""
+                }
+              ]
             }
           },
           {
@@ -1524,20 +1550,20 @@
           },
           {
             "position": {
-              "x": 75,
-              "y": 128.00000000000009
+              "x": 4.999999999999986,
+              "y": 128.00000000000006
             },
             "size": {
-              "width": 90,
-              "height": 80
+              "width": 160,
+              "height": 100
             },
             "attrs": {
               "text": {
                 "text": "Allsecure Mobile Phone OTT Service"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1551,53 +1577,26 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
-            }
-          },
-          {
-            "position": {
-              "x": 255,
-              "y": -500
-            },
-            "size": {
-              "width": 120,
-              "height": 60
-            },
-            "attrs": {
-              "text": {
-                "text": "Management-Report (signiert)"
-              },
-              "topLine": {
-                "strokeWidth": 1.5,
-                "strokeDasharray": null
-              },
-              "bottomLine": {
-                "strokeWidth": 1.5,
-                "strokeDasharray": null
-              }
-            },
-            "visible": true,
-            "shape": "store",
-            "id": "ae1b9c13-7f21-41f9-a453-993b8b42a896",
-            "zIndex": 15,
-            "data": {
-              "type": "tm.Store",
-              "name": "Management-Report (signiert)",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isALog": false,
-              "isEncrypted": false,
-              "isSigned": false,
-              "storesCredentials": false,
-              "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "c99a4f44-fe1b-455f-9138-8fac5ae1210c",
+                  "title": "Manipulation des OTT Codes",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Ein Angreifer könnte versuchen, den OTT-Dienst zu manipulieren, um die Ausgabe des OTT-Codes zu verändern oder zu manipulieren, bevor dieser an den Benutzer gesendet wird",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 114,
+                  "score": ""
+                }
+              ]
             }
           },
           {
@@ -1614,8 +1613,8 @@
                 "text": "Management-Repor signieren"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1629,12 +1628,26 @@
               "description": "Export-Prozess ",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "e16b2562-7da6-4c4d-9259-ae3e3da4288f",
+                  "title": "Informationsverlust",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Ein Angreifer könnte unbefugten Zugang zu den monatlich erstellten Exportberichten erhalten und dadurch Zugriff auf sensible Unternehmensdaten gewinnen.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 113,
+                  "score": ""
+                }
+              ]
             }
           },
           {
@@ -1651,8 +1664,8 @@
                 "text": "SIEM-System "
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1666,18 +1679,32 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "be0f6ff5-f46d-44ba-986c-faf482ecb3b3",
+                  "title": "Buggy Authorization Checks",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Elevation of privilege",
+                  "description": "Wenn die Überwachungssysteme nicht richtig gesichert sind oder fehlerhafte Autorisierungsprüfungen haben, könnten Angreifer möglicherweise auf vertrauliche Berichte zugreifen oder Alarmmeldungen deaktivieren.\n",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 106,
+                  "score": ""
+                }
+              ]
             }
           },
           {
             "position": {
-              "x": -210,
-              "y": -580
+              "x": 165,
+              "y": -630
             },
             "size": {
               "width": 112.5,
@@ -1718,7 +1745,7 @@
     ],
     "reviewer": "Georg Neugebauer",
     "diagramTop": 10,
-    "threatTop": 105
+    "threatTop": 117
   },
   "version": "2.1.1"
 }
