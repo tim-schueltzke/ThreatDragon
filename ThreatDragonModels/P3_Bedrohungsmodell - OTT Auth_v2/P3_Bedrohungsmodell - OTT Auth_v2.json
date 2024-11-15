@@ -1341,7 +1341,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1361,7 +1362,7 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
@@ -1370,7 +1371,7 @@
                 {
                   "id": "2af521a3-ebc4-4d2d-a996-eb6438717755",
                   "title": "Modifies redirects in webapp",
-                  "status": "Mitigated",
+                  "status": "Open",
                   "severity": "Low",
                   "type": "Tampering",
                   "description": "Ein Angreifer könnte manipulierte Weiterleitungen in der Webanwendung einfügen, um Benutzer auf schädliche Seiten umzuleiten\n\nCAPEC-34 - \"HTTP Response Splitting\" (könnte verwendet werden, um die Weiterleitungen zu manipulieren).\n\nMIRE: T1437.001 Application Layer Protocol: Web Protocols Angreifer können Webprotokolle wie HTTP und HTTPS verwenden, um unerkannt mit Geräten zu kommunizieren, indem sie den legitimen Datenverkehr nachahmen und so der Erkennung entgehen.\n\nD: 10 / R:  2/ E:  7/ A:  2/ DREA: 21",
@@ -1719,8 +1720,8 @@
                 "text": "Management"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1734,13 +1735,13 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
               "threats": [
                 {
                   "id": "545a0d19-f71b-4095-91c4-9b1890740d64",
                   "title": "Fake email to get acces to data",
-                  "status": "Mitigated",
+                  "status": "Open",
                   "severity": "High",
                   "type": "Spoofing",
                   "description": "CAPEC-98: Phishing -- Angreifer Täuscht vertrauenwürdige EMail vor\n\nMITRE: DS0021 - Persona: Täuscht jemand anderes vor zu sein\n\nD 8 R 10 E 6 A 10 DREA: 34",
