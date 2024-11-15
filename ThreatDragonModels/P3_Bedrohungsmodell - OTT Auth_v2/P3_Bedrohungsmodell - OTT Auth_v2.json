@@ -98,19 +98,6 @@
                   "score": "28"
                 },
                 {
-                  "id": "8840fb21-2fc7-4f9f-b24e-f80e7230d765",
-                  "title": "Modifies redirects in webapp",
-                  "status": "Open",
-                  "severity": "Low",
-                  "type": "Tampering",
-                  "description": "Ein Angreifer könnte manipulierte Weiterleitungen in der Webanwendung einfügen, um Benutzer auf schädliche Seiten umzuleiten\n\nCAPEC-34 - \"HTTP Response Splitting\" (könnte verwendet werden, um die Weiterleitungen zu manipulieren).\n\nMIRE: T1437.001 Application Layer Protocol: Web Protocols Angreifer können Webprotokolle wie HTTP und HTTPS verwenden, um unerkannt mit Geräten zu kommunizieren, indem sie den legitimen Datenverkehr nachahmen und so der Erkennung entgehen.\n\nD: 10 / R:  2/ E:  7/ A:  2/ DREA: 21",
-                  "mitigation": "Validierung und Normalisierung der URL-Parameter, um sicherzustellen, dass sie keine unerwarteten Weiterleitungen verursachen.\nNutzung sicherer Methoden zur Generierung von Weiterleitungen und Headern, um Code-Injection zu verhindern.\n\nOWASP ASVS - V10.2 -- Suche nach bösartigem Code - keine versteckten Funktionen oder Hintertüren (Bibliotheken und co)\n[01:01]\nClaims to have not received\n\nÜberwachung des OTT-Sendeprotokolls – Sicherstellen, dass OTT-Sendeereignisse und Empfangsbestätigungen vollständig erfasst und analysiert werden.\nMehrstufige Authentifizierung – Bestätigungsmechanismen einbauen, die die OTT-Zustellung validieren.\n\nOWASP ASVS V7.1 - Sicherstellen, dass alle sicherheitsrelevanten Events protokolliert und überprüft werden.\nD:  7/ R: 2 / E: 3 / A: 1 / DREA:13",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 104,
-                  "score": "13"
-                },
-                {
                   "id": "eb6ddb77-36e0-4524-b4d6-eb63cfc805a5",
                   "title": "Claims to have not received",
                   "status": "Open",
@@ -314,66 +301,6 @@
               "isEncrypted": false,
               "isPublicNetwork": false
             }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "1. Auth Challenge",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "isTrustBoundary": false
-            },
-            "id": "35f9f840-c060-4c31-bf9a-0e17a95ddf66",
-            "labels": [
-              {
-                "position": 0.5,
-                "attrs": {
-                  "label": {
-                    "text": "Login"
-                  }
-                }
-              }
-            ],
-            "source": {
-              "cell": "dec51efb-bf55-4b9c-a294-0e45f4e823f6"
-            },
-            "target": {
-              "cell": "a1d5bbe6-465f-43bb-bd96-7ce687db37aa"
-            },
-            "vertices": [
-              {
-                "x": 50,
-                "y": -30
-              },
-              {
-                "x": 110,
-                "y": -10
-              }
-            ]
           },
           {
             "shape": "flow",
@@ -984,65 +911,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Telefonnummer, OTT",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "isTrustBoundary": false
-            },
-            "id": "10939d18-1017-4b86-841d-9f5394f83f90",
-            "labels": [
-              {
-                "position": {
-                  "distance": 0.4667551402818713,
-                  "offset": -12.917577739081434
-                },
-                "attrs": {
-                  "label": {
-                    "text": "Antwort"
-                  }
-                }
-              }
-            ],
-            "source": {
-              "cell": "ebc88767-2bed-409f-b854-efadec206ba8"
-            },
-            "target": {
-              "cell": "94f68ce7-aa88-45a4-ba41-c0b62d6a959c"
-            },
-            "vertices": [
-              {
-                "x": 770,
-                "y": 65
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "OTT",
               "description": "",
               "outOfScope": false,
@@ -1411,6 +1279,144 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Telefonnummer, OTT",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "isTrustBoundary": false
+            },
+            "id": "10939d18-1017-4b86-841d-9f5394f83f90",
+            "labels": [
+              {
+                "position": {
+                  "distance": 0.4667551402818713,
+                  "offset": -12.917577739081434
+                },
+                "attrs": {
+                  "label": {
+                    "text": "Antwort"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "cell": "ebc88767-2bed-409f-b854-efadec206ba8"
+            },
+            "target": {
+              "cell": "94f68ce7-aa88-45a4-ba41-c0b62d6a959c"
+            },
+            "vertices": [
+              {
+                "x": 790,
+                "y": 65
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "1. Auth Challenge",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "2af521a3-ebc4-4d2d-a996-eb6438717755",
+                  "title": "Modifies redirects in webapp",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Tampering",
+                  "description": "Ein Angreifer könnte manipulierte Weiterleitungen in der Webanwendung einfügen, um Benutzer auf schädliche Seiten umzuleiten\n\nCAPEC-34 - \"HTTP Response Splitting\" (könnte verwendet werden, um die Weiterleitungen zu manipulieren).\n\nMIRE: T1437.001 Application Layer Protocol: Web Protocols Angreifer können Webprotokolle wie HTTP und HTTPS verwenden, um unerkannt mit Geräten zu kommunizieren, indem sie den legitimen Datenverkehr nachahmen und so der Erkennung entgehen.\n\nD: 10 / R:  2/ E:  7/ A:  2/ DREA: 21",
+                  "mitigation": "Validierung und Normalisierung der URL-Parameter, um sicherzustellen, dass sie keine unerwarteten Weiterleitungen verursachen.\nNutzung sicherer Methoden zur Generierung von Weiterleitungen und Headern, um Code-Injection zu verhindern.\n\nOWASP ASVS - V10.2 -- Suche nach bösartigem Code - keine versteckten Funktionen oder Hintertüren (Bibliotheken und co)\n[01:01]\nClaims to have not received\n\nÜberwachung des OTT-Sendeprotokolls – Sicherstellen, dass OTT-Sendeereignisse und Empfangsbestätigungen vollständig erfasst und analysiert werden.\nMehrstufige Authentifizierung – Bestätigungsmechanismen einbauen, die die OTT-Zustellung validieren.\n\nOWASP ASVS V7.1 - Sicherstellen, dass alle sicherheitsrelevanten Events protokolliert und überprüft werden.\nD:  7/ R: 2 / E: 3 / A: 1 / DREA:13",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 119,
+                  "score": "13"
+                }
+              ],
+              "isTrustBoundary": false
+            },
+            "id": "35f9f840-c060-4c31-bf9a-0e17a95ddf66",
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "Login"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "cell": "dec51efb-bf55-4b9c-a294-0e45f4e823f6"
+            },
+            "target": {
+              "cell": "a1d5bbe6-465f-43bb-bd96-7ce687db37aa"
+            },
+            "vertices": [
+              {
+                "x": -30,
+                "y": -50
+              },
+              {
+                "x": 50,
+                "y": -30
+              },
+              {
+                "x": 110,
+                "y": -10
+              }
+            ]
+          },
+          {
             "position": {
               "x": 451,
               "y": -194
@@ -1746,7 +1752,7 @@
     ],
     "reviewer": "Georg Neugebauer",
     "diagramTop": 10,
-    "threatTop": 117
+    "threatTop": 119
   },
   "version": "2.1.1"
 }
