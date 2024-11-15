@@ -67,8 +67,8 @@
                 "text": "Login System -\nWebapp +\nMobile App"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -100,7 +100,7 @@
                 {
                   "id": "eb6ddb77-36e0-4524-b4d6-eb63cfc805a5",
                   "title": "Claims to have not received",
-                  "status": "Mitigated",
+                  "status": "Open",
                   "severity": "Low",
                   "type": "Repudiation",
                   "description": "Ein Benutzer behaupten könnte, den OTT nicht erhalten zu haben. \n\nCAPEC-216 - \"Communication Channel Manipulation\" - Bezug auf die Möglichkeit, OTT abzufangen oder zu manipulieren.\n\nMITRE: T1078 -- Tactic \"Defense Evasion\" und Technique \"T1078\" - Valid Accounts (sich als legitimer Nutzer ausgeben, z.B. durch das Behaupten, keinen OTT erhalten zu haben).\n\nD: 3 / R: 9 / E:  2/ A:  1/ DREA: 15",
@@ -111,7 +111,7 @@
                   "score": "6"
                 }
               ],
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isWebApplication": null,
               "handlesCardPayment": null,
               "handlesGoodsOrServices": null
