@@ -101,27 +101,27 @@
                   "id": "8840fb21-2fc7-4f9f-b24e-f80e7230d765",
                   "title": "Modifies redirects in webapp",
                   "status": "Open",
-                  "severity": "Medium",
+                  "severity": "Low",
                   "type": "Tampering",
                   "description": "Ein Angreifer könnte manipulierte Weiterleitungen in der Webanwendung einfügen, um Benutzer auf schädliche Seiten umzuleiten\n\nCAPEC-34 - \"HTTP Response Splitting\" (könnte verwendet werden, um die Weiterleitungen zu manipulieren).\n\nMIRE: T1437.001 Application Layer Protocol: Web Protocols Angreifer können Webprotokolle wie HTTP und HTTPS verwenden, um unerkannt mit Geräten zu kommunizieren, indem sie den legitimen Datenverkehr nachahmen und so der Erkennung entgehen.\n\nD: 10 / R:  2/ E:  7/ A:  2/ DREA: 21",
-                  "mitigation": "Validierung und Normalisierung der URL-Parameter, um sicherzustellen, dass sie keine unerwarteten Weiterleitungen verursachen.\nNutzung sicherer Methoden zur Generierung von Weiterleitungen und Headern, um Code-Injection zu verhindern.\n\nOWASP ASVS - V10.2 -- Suche nach bösartigem Code - keine versteckten Funktionen oder Hintertüren (Bibliotheken und co)\n[01:01]\nClaims to have not received\n\nÜberwachung des OTT-Sendeprotokolls – Sicherstellen, dass OTT-Sendeereignisse und Empfangsbestätigungen vollständig erfasst und analysiert werden.\nMehrstufige Authentifizierung – Bestätigungsmechanismen einbauen, die die OTT-Zustellung validieren.\n\nOWASP ASVS V7.1 - Sicherstellen, dass alle sicherheitsrelevanten Events protokolliert und überprüft werden.",
+                  "mitigation": "Validierung und Normalisierung der URL-Parameter, um sicherzustellen, dass sie keine unerwarteten Weiterleitungen verursachen.\nNutzung sicherer Methoden zur Generierung von Weiterleitungen und Headern, um Code-Injection zu verhindern.\n\nOWASP ASVS - V10.2 -- Suche nach bösartigem Code - keine versteckten Funktionen oder Hintertüren (Bibliotheken und co)\n[01:01]\nClaims to have not received\n\nÜberwachung des OTT-Sendeprotokolls – Sicherstellen, dass OTT-Sendeereignisse und Empfangsbestätigungen vollständig erfasst und analysiert werden.\nMehrstufige Authentifizierung – Bestätigungsmechanismen einbauen, die die OTT-Zustellung validieren.\n\nOWASP ASVS V7.1 - Sicherstellen, dass alle sicherheitsrelevanten Events protokolliert und überprüft werden.\nD:  7/ R: 2 / E: 3 / A: 1 / DREA:13",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 104,
-                  "score": ""
+                  "score": "13"
                 },
                 {
                   "id": "eb6ddb77-36e0-4524-b4d6-eb63cfc805a5",
                   "title": "Claims to have not received",
                   "status": "Open",
-                  "severity": "Medium",
+                  "severity": "Low",
                   "type": "Repudiation",
                   "description": "Ein Benutzer behaupten könnte, den OTT nicht erhalten zu haben. \n\nCAPEC-216 - \"Communication Channel Manipulation\" - Bezug auf die Möglichkeit, OTT abzufangen oder zu manipulieren.\n\nMITRE: T1078 -- Tactic \"Defense Evasion\" und Technique \"T1078\" - Valid Accounts (sich als legitimer Nutzer ausgeben, z.B. durch das Behaupten, keinen OTT erhalten zu haben).\n\nD: 3 / R: 9 / E:  2/ A:  1/ DREA: 15",
-                  "mitigation": "Überwachung des OTT-Sendeprotokolls – Sicherstellen, dass OTT-Sendeereignisse und Empfangsbestätigungen vollständig erfasst und analysiert werden.\nMehrstufige Authentifizierung – Bestätigungsmechanismen einbauen, die die OTT-Zustellung validieren.\n\nOWASP ASVS V7.1 - Sicherstellen, dass alle sicherheitsrelevanten Events protokolliert und überprüft werden.",
+                  "mitigation": "Überwachung des OTT-Sendeprotokolls – Sicherstellen, dass OTT-Sendeereignisse und Empfangsbestätigungen vollständig erfasst und analysiert werden.\nMehrstufige Authentifizierung – Bestätigungsmechanismen einbauen, die die OTT-Zustellung validieren.\n\nOWASP ASVS V7.1 - Sicherstellen, dass alle sicherheitsrelevanten Events protokolliert und überprüft werden.\nD: 3 / R:  1/ E:  1/ A:1  / DREA:6",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 109,
-                  "score": ""
+                  "score": "6"
                 }
               ],
               "hasOpenThreats": true,
@@ -165,14 +165,14 @@
                   "id": "7e2b9559-ac62-462f-abe2-bf6987459450",
                   "title": "Spoofing von Nutzeridentitäten",
                   "status": "Open",
-                  "severity": "Medium",
+                  "severity": "Low",
                   "type": "Spoofing",
                   "description": "Ein Angreifer könnte sich als legitimer Benutzer ausgeben und versuchen, den OTT (One-Time Token) abzufangen oder zu erraten, um Zugang zu einem Konto zu erhalten.\n\nCAPEC-151: Identity Spoofing - Ermöglicht es Angreifern, die Identität eines anderen Nutzers vorzutäuschen, um auf Ressourcen oder Daten zuzugreifen, zu denen sie ansonsten keinen Zugriff hätten.\n\nMITRE:  T1078 - Valid Accounts -- Angreifer nutzt legitime Anmelde Daten um sich als Nutzer auszugeben, um Zugang zu einem Konto zu erahlten.\n\nD:  10/ R: 2/ E: 7 / A:  2/ DREA: 21 ",
-                  "mitigation": "Provide remediation for this threMulti-Faktor-Authentifizierung (MFA) – Zusätzliche Authentifizierungsmaßnahmen einführen, um sicherzustellen, dass ein Angreifer nicht nur den OTT, sondern auch weitere Authentifizierungsfaktoren überwinden müsste.\nKontobasierte Anomalieüberwachung – Überwachung auf verdächtige Anmeldeaktivitäten, z.B. bei mehrfachen Fehleingaben oder ungewöhnlichen Ortswechseln.\n\nV2.1 -- Passwortsicherheit -- Nicht nur via OTT vom Mobile Phone sonder auch 2FA via Auth app oder co...at or a reason if status is N/A",
+                  "mitigation": "Multi-Faktor-Authentifizierung (MFA) – Zusätzliche Authentifizierungsmaßnahmen einführen, um sicherzustellen, dass ein Angreifer nicht nur den OTT, sondern auch weitere Authentifizierungsfaktoren überwinden müsste.\nKontobasierte Anomalieüberwachung – Überwachung auf verdächtige Anmeldeaktivitäten, z.B. bei mehrfachen Fehleingaben oder ungewöhnlichen Ortswechseln.\n\nV2.1 -- Passwortsicherheit -- Nicht nur via OTT vom Mobile Phone sonder auch 2FA via Auth app oder co...\n\nD:  9/ R:  1/ E:  1/ A:  1/ DREA:12",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 112,
-                  "score": ""
+                  "score": "12"
                 }
               ],
               "hasOpenThreats": true,
@@ -1055,15 +1055,15 @@
               "threats": []
             },
             "id": "b79656cd-4e85-451c-82b8-f667c70d9292",
+            "labels": [
+              "OTT"
+            ],
             "source": {
               "cell": "fd7303e8-29d2-4d76-bf7d-87eb619ede69"
             },
             "target": {
               "cell": "95210776-3c95-489b-8af4-95e5c851fcca"
-            },
-            "labels": [
-              "OTT"
-            ]
+            }
           },
           {
             "shape": "flow",
@@ -1097,6 +1097,9 @@
               "threats": []
             },
             "id": "bf2a42f3-1b22-4b1a-88fe-c01c4331fa59",
+            "labels": [
+              "Auslesen von Informationen"
+            ],
             "source": {
               "cell": "c2716661-ef88-48a8-8d0f-724e1923d562"
             },
@@ -1108,9 +1111,6 @@
                 "x": 470,
                 "y": -220
               }
-            ],
-            "labels": [
-              "Auslesen von Informationen"
             ]
           },
           {
@@ -1145,6 +1145,9 @@
               "threats": []
             },
             "id": "3a8c8ebf-365d-4cdc-b77d-05cb7c0d47da",
+            "labels": [
+              "OTT"
+            ],
             "source": {
               "cell": "95210776-3c95-489b-8af4-95e5c851fcca"
             },
@@ -1156,9 +1159,6 @@
                 "x": 170,
                 "y": 110
               }
-            ],
-            "labels": [
-              "OTT"
             ]
           },
           {
@@ -1193,6 +1193,9 @@
               "threats": []
             },
             "id": "df0e920e-e33f-4a3f-81ce-174315f487c6",
+            "labels": [
+              "Service überwachung Daten "
+            ],
             "source": {
               "cell": "94f68ce7-aa88-45a4-ba41-c0b62d6a959c"
             },
@@ -1204,9 +1207,6 @@
                 "x": 350,
                 "y": -110
               }
-            ],
-            "labels": [
-              "Service überwachung Daten "
             ]
           },
           {
@@ -1241,6 +1241,9 @@
               "threats": []
             },
             "id": "a80bc3b7-62d2-4350-a317-ca465958ca75",
+            "labels": [
+              "Service überwachung Daten "
+            ],
             "source": {
               "cell": "95210776-3c95-489b-8af4-95e5c851fcca"
             },
@@ -1252,9 +1255,6 @@
                 "x": 120,
                 "y": 40
               }
-            ],
-            "labels": [
-              "Service überwachung Daten "
             ]
           },
           {
@@ -1347,6 +1347,9 @@
               "threats": []
             },
             "id": "4ecace65-3c9d-4630-a5fc-35c491edcd71",
+            "labels": [
+              "E-mail report signiert und verschlüsselt"
+            ],
             "source": {
               "cell": "48d857ab-4837-4ffa-a9f0-a87d5e5f9ebb"
             },
@@ -1359,9 +1362,6 @@
                 "x": 90,
                 "y": -320
               }
-            ],
-            "labels": [
-              "E-mail report signiert und verschlüsselt"
             ]
           },
           {
@@ -1456,12 +1456,12 @@
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Information disclosure",
-                  "description": "Ein Angreifer könnte hier versuchen, durch schwache Datenbankberechtigungen oder fehlende Verschlüsselung Informationen zu extrahieren. Maßnahmen umfassen verschlüsselte Speicherung und eingeschränkte Zugriffskontrollen.\n\nCAPEC-122: Privilege Abuse -- Angreifer nutzen schwache Berechtigungen oder unzureichende Zugriffskontrollen aus, um unautorisiert auf sensible Daten zuzugreifen.\n\nMitre: T1555 - Credentials from Password Stores -- Angreifer versuchen auf ungeschützt oder schwach geschütze Datenbanken zuzugreifen um Daten zu extrahieren.\n\nD: 5 / R: 10 / E: 4 / A: 1 / DREA: 20",
-                  "mitigation": "Verschlüsselte Speicherung sensibler Daten – Gewährleistung, dass alle sensiblen Informationen in der Datenbank sicher verschlüsselt gespeichert werden, um den Zugriff auf die Rohdaten einzuschränken.\n\nOWASP ASVS V4 -- Maßnahmen zur Zugriffssteuerung - Sicherstellen, dass nur autorisierte Personen Zugriff auf Ressourcen haben und dass Rollen und Berechtigungen manipulationssicher gespeichert werden.\n",
+                  "description": "Ein Angreifer könnte hier versuchen, durch schwache Datenbankberechtigungen oder fehlende Verschlüsselung Informationen zu extrahieren. Maßnahmen umfassen verschlüsselte Speicherung und eingeschränkte Zugriffskontrollen.\n\nCAPEC-122: Privilege Abuse -- Angreifer nutzen schwache Berechtigungen oder unzureichende Zugriffskontrollen aus, um unautorisiert auf sensible Daten zuzugreifen.\n\nMitre: T1555 - Credentials from Password Stores -- Angreifer versuchen auf ungeschützt oder schwach geschütze Datenbanken zuzugreifen um Daten zu extrahieren.\n\nD: 5 / R: 10 / E: 4 / A: 10 / DREA: 29",
+                  "mitigation": "Verschlüsselte Speicherung sensibler Daten – Gewährleistung, dass alle sensiblen Informationen in der Datenbank sicher verschlüsselt gespeichert werden, um den Zugriff auf die Rohdaten einzuschränken.\n\nOWASP ASVS V4 -- Maßnahmen zur Zugriffssteuerung - Sicherstellen, dass nur autorisierte Personen Zugriff auf Ressourcen haben und dass Rollen und Berechtigungen manipulationssicher gespeichert werden.\nD:  3/ R:  7/ E: 2 / A:  5/ DREA:15",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 111,
-                  "score": ""
+                  "score": "15"
                 }
               ]
             }
@@ -1570,8 +1570,8 @@
             },
             "visible": true,
             "shape": "process",
-            "id": "95210776-3c95-489b-8af4-95e5c851fcca",
             "zIndex": 14,
+            "id": "95210776-3c95-489b-8af4-95e5c851fcca",
             "data": {
               "type": "tm.Process",
               "name": "Allsecure Mobile Phone OTT Service",
@@ -1591,11 +1591,11 @@
                   "severity": "Medium",
                   "type": "Tampering",
                   "description": "Ein Angreifer könnte versuchen, den OTT-Dienst zu manipulieren, um die Ausgabe des OTT-Codes zu verändern oder zu manipulieren, bevor dieser an den Benutzer gesendet wird\n\nCAPEC-137: Parameter Injection -- Ermöglicht es Angreifern, Eingaben zu manipulieren, um unerlaubte Befehle auszuführen oder auf geschützte Daten zuzugreifen.\n\nMITRE: T1437.001 - - Application Layer Protocol: Web Protocols --  Angreifer nutzen Standard-Webprotokolle, um bösartige Kommunikation unauffällig einzuschleusen\n\nD:  5/ R:  2/ E:  8/ A:  2/ DREA: 17\n",
-                  "mitigation": "Validierung der Eingaben und Parameter: Der OTT-Dienst sollte strikte Überprüfungen und Validierungen aller eingehenden Parameter anwenden, um sicherzustellen, dass sie nicht modifiziert wurden oder unerwartete Werte enthalten.\n\nOWASP ASVS V5.1 Eingabeprüfung -- Empfohlen zur Verhinderung von Injections",
+                  "mitigation": "Validierung der Eingaben und Parameter: Der OTT-Dienst sollte strikte Überprüfungen und Validierungen aller eingehenden Parameter anwenden, um sicherzustellen, dass sie nicht modifiziert wurden oder unerwartete Werte enthalten.\n\nOWASP ASVS V5.1 Eingabeprüfung -- Empfohlen zur Verhinderung von Injections\nD:  8/ R: 2 / E: 4 / A: 1 / DREA:15",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 114,
-                  "score": ""
+                  "score": "15"
                 }
               ]
             }
@@ -1621,8 +1621,8 @@
             },
             "visible": true,
             "shape": "process",
-            "id": "708364eb-dca2-497e-a54a-db95a2610ea5",
             "zIndex": 16,
+            "id": "708364eb-dca2-497e-a54a-db95a2610ea5",
             "data": {
               "type": "tm.Process",
               "name": "Management-Repor signieren",
@@ -1639,14 +1639,14 @@
                   "id": "e16b2562-7da6-4c4d-9259-ae3e3da4288f",
                   "title": "Informationsdiebstahl",
                   "status": "Open",
-                  "severity": "Medium",
+                  "severity": "Low",
                   "type": "Information disclosure",
                   "description": "Ein Angreifer könnte unbefugten Zugang zu den monatlich erstellten Exportberichten erhalten und dadurch Zugriff auf sensible Unternehmensdaten gewinnen.\n\nCAPEC-118: Collect and Analyze Information -- Angreifer verschaffen sich Zugriff auf sensible Daten, indem sie Datenübertragungen oder Speichersysteme ausnutzen, die unzureichend gesichert sind.\n\nMITRE: T1115 - Clipboard Data -- Angreifer kann ohne Rechte in der Zwischenablage Berichte einsehen.\nD: 3 / R:  9/ E: 2 / A:  1/ DREA: 15",
-                  "mitigation": "Verschlüsselung der Berichte – Speicherung und Übertragung der Exportberichte nur in verschlüsselter Form, um unbefugte Zugriffe zu verhindern.\nZugangskontrolle für sensible Berichte – Einschränkung des Zugriffs auf die Exportberichte auf autorisierte Personen und sichere Authentifizierung.\n\nOWASP ASVS V9.2 - Sicherstellung der Serverkommunikation, das sensible Daten während der Übertragung und Speicherung verschlüsselt sind.",
+                  "mitigation": "Verschlüsselung der Berichte – Speicherung und Übertragung der Exportberichte nur in verschlüsselter Form, um unbefugte Zugriffe zu verhindern.\nZugangskontrolle für sensible Berichte – Einschränkung des Zugriffs auf die Exportberichte auf autorisierte Personen und sichere Authentifizierung.\n\nOWASP ASVS V9.2 - Sicherstellung der Serverkommunikation, das sensible Daten während der Übertragung und Speicherung verschlüsselt sind.\n\nD:  3/ R: 2 / E: 1 / A: 1 / DREA:7",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 113,
-                  "score": ""
+                  "score": "7"
                 }
               ]
             }
@@ -1672,8 +1672,8 @@
             },
             "visible": true,
             "shape": "process",
-            "id": "48d857ab-4837-4ffa-a9f0-a87d5e5f9ebb",
             "zIndex": 17,
+            "id": "48d857ab-4837-4ffa-a9f0-a87d5e5f9ebb",
             "data": {
               "type": "tm.Process",
               "name": "SIEM-System ",
@@ -1690,14 +1690,14 @@
                   "id": "be0f6ff5-f46d-44ba-986c-faf482ecb3b3",
                   "title": "Buggy Authorization Checks",
                   "status": "Open",
-                  "severity": "Medium",
+                  "severity": "Low",
                   "type": "Elevation of privilege",
                   "description": "Wenn die Überwachungssysteme nicht richtig gesichert sind oder fehlerhafte Autorisierungsprüfungen haben, könnten Angreifer möglicherweise auf vertrauliche Berichte zugreifen oder Alarmmeldungen deaktivieren.\n\nCAPEC-233: Privilege Escalation -- Angreifer nutzen Schwächen in Autorisierungsprüfungen, um höhere Berechtigungen zu erlangen und unautorisierten Zugriff auf sensible Funktionen oder Daten zu erhalten.\n\nMITRE T212/T1068 --  Angreifer nutzen Schwächen in Autorisierungsmechanismen aus, um sich höhere Berechtigungen zu verschaffen, was zum unbefugten Zugriff auf vertrauliche Daten oder die Manipulation von Alarmfunktionen führen kann.\nD:  8/ R:  8/ E:  3/ A:  1/ DREA: 20",
-                  "mitigation": "Rollenbasierte Zugriffskontrolle (RBAC) – Einrichtung einer fein abgestuften Zugriffskontrolle zur Begrenzung des Zugriffs auf vertrauliche Funktionen.\n\nOWASP ASVS V4.1 - Design der Allgemeinen Zugriffssteuerung - Implementierung einer rollenbasierten Zugriffskontrolle zur Begrenzung des Zugriffs auf sensible Funktionen.",
+                  "mitigation": "Rollenbasierte Zugriffskontrolle (RBAC) – Einrichtung einer fein abgestuften Zugriffskontrolle zur Begrenzung des Zugriffs auf vertrauliche Funktionen.\n\nOWASP ASVS V4.1 - Design der Allgemeinen Zugriffssteuerung - Implementierung einer rollenbasierten Zugriffskontrolle zur Begrenzung des Zugriffs auf sensible Funktionen.\n\nD:  8/ R: 2 / E: 2 / A:  1/ DREA:13",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 106,
-                  "score": ""
+                  "score": "13"
                 }
               ]
             }
@@ -1723,8 +1723,8 @@
             },
             "visible": true,
             "shape": "actor",
-            "id": "b8f884ce-d654-4066-8dc5-929713194fcd",
             "zIndex": 18,
+            "id": "b8f884ce-d654-4066-8dc5-929713194fcd",
             "data": {
               "type": "tm.Actor",
               "name": "Management",
