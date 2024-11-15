@@ -104,7 +104,7 @@
                   "severity": "Medium",
                   "type": "Tampering",
                   "description": "Ein Angreifer könnte manipulierte Weiterleitungen in der Webanwendung einfügen, um Benutzer auf schädliche Seiten umzuleiten\n\nCAPEC-34 - \"HTTP Response Splitting\" (könnte verwendet werden, um die Weiterleitungen zu manipulieren).\n\nMIRE: T1437.001 Application Layer Protocol: Web Protocols Angreifer können Webprotokolle wie HTTP und HTTPS verwenden, um unerkannt mit Geräten zu kommunizieren, indem sie den legitimen Datenverkehr nachahmen und so der Erkennung entgehen.\n\nD: 10 / R:  2/ E:  7/ A:  2/ DREA: 21",
-                  "mitigation": "-Validierung und Normalisierung der URL-Parameter, um sicherzustellen, dass sie keine unerwarteten Weiterleitungen verursachen.\n-Nutzung sicherer Methoden zur Generierung von Weiterleitungen und Headern, um Code-Injection zu verhindern.",
+                  "mitigation": "Validierung und Normalisierung der URL-Parameter, um sicherzustellen, dass sie keine unerwarteten Weiterleitungen verursachen.\nNutzung sicherer Methoden zur Generierung von Weiterleitungen und Headern, um Code-Injection zu verhindern.\n\nOWASP ASVS - V10.2 -- Suche nach bösartigem Code - keine versteckten Funktionen oder Hintertüren (Bibliotheken und co)\n[01:01]\nClaims to have not received\n\nÜberwachung des OTT-Sendeprotokolls – Sicherstellen, dass OTT-Sendeereignisse und Empfangsbestätigungen vollständig erfasst und analysiert werden.\nMehrstufige Authentifizierung – Bestätigungsmechanismen einbauen, die die OTT-Zustellung validieren.\n\nOWASP ASVS V7.1 - Sicherstellen, dass alle sicherheitsrelevanten Events protokolliert und überprüft werden.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 104,
@@ -117,7 +117,7 @@
                   "severity": "Medium",
                   "type": "Repudiation",
                   "description": "Ein Benutzer behaupten könnte, den OTT nicht erhalten zu haben. \n\nCAPEC-216 - \"Communication Channel Manipulation\" - Bezug auf die Möglichkeit, OTT abzufangen oder zu manipulieren.\n\nMITRE: T1078 -- Tactic \"Defense Evasion\" und Technique \"T1078\" - Valid Accounts (sich als legitimer Nutzer ausgeben, z.B. durch das Behaupten, keinen OTT erhalten zu haben).\n\nD: 3 / R: 9 / E:  2/ A:  1/ DREA: 15",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Überwachung des OTT-Sendeprotokolls – Sicherstellen, dass OTT-Sendeereignisse und Empfangsbestätigungen vollständig erfasst und analysiert werden.\nMehrstufige Authentifizierung – Bestätigungsmechanismen einbauen, die die OTT-Zustellung validieren.\n\nOWASP ASVS V7.1 - Sicherstellen, dass alle sicherheitsrelevanten Events protokolliert und überprüft werden.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 109,
@@ -168,7 +168,7 @@
                   "severity": "Medium",
                   "type": "Spoofing",
                   "description": "Ein Angreifer könnte sich als legitimer Benutzer ausgeben und versuchen, den OTT (One-Time Token) abzufangen oder zu erraten, um Zugang zu einem Konto zu erhalten.\n\nCAPEC-151: Identity Spoofing - Ermöglicht es Angreifern, die Identität eines anderen Nutzers vorzutäuschen, um auf Ressourcen oder Daten zuzugreifen, zu denen sie ansonsten keinen Zugriff hätten.\n\nMITRE:  T1078 - Valid Accounts -- Angreifer nutzt legitime Anmelde Daten um sich als Nutzer auszugeben, um Zugang zu einem Konto zu erahlten.\n\nD:  10/ R: 2/ E: 7 / A:  2/ DREA: 21 ",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Provide remediation for this threMulti-Faktor-Authentifizierung (MFA) – Zusätzliche Authentifizierungsmaßnahmen einführen, um sicherzustellen, dass ein Angreifer nicht nur den OTT, sondern auch weitere Authentifizierungsfaktoren überwinden müsste.\nKontobasierte Anomalieüberwachung – Überwachung auf verdächtige Anmeldeaktivitäten, z.B. bei mehrfachen Fehleingaben oder ungewöhnlichen Ortswechseln.\n\nV2.1 -- Passwortsicherheit -- Nicht nur via OTT vom Mobile Phone sonder auch 2FA via Auth app oder co...at or a reason if status is N/A",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 112,
@@ -181,7 +181,8 @@
               "isEncrypted": false,
               "isPublicNetwork": false,
               "handlesCardPayment": null,
-              "isWebApplication": null
+              "isWebApplication": null,
+              "handlesGoodsOrServices": null
             }
           },
           {
@@ -1456,7 +1457,7 @@
                   "severity": "Medium",
                   "type": "Information disclosure",
                   "description": "Ein Angreifer könnte hier versuchen, durch schwache Datenbankberechtigungen oder fehlende Verschlüsselung Informationen zu extrahieren. Maßnahmen umfassen verschlüsselte Speicherung und eingeschränkte Zugriffskontrollen.\n\nCAPEC-122: Privilege Abuse -- Angreifer nutzen schwache Berechtigungen oder unzureichende Zugriffskontrollen aus, um unautorisiert auf sensible Daten zuzugreifen.\n\nMitre: T1555 - Credentials from Password Stores -- Angreifer versuchen auf ungeschützt oder schwach geschütze Datenbanken zuzugreifen um Daten zu extrahieren.\n\nD: 5 / R: 10 / E: 4 / A: 1 / DREA: 20",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Verschlüsselte Speicherung sensibler Daten – Gewährleistung, dass alle sensiblen Informationen in der Datenbank sicher verschlüsselt gespeichert werden, um den Zugriff auf die Rohdaten einzuschränken.\n\nOWASP ASVS V4 -- Maßnahmen zur Zugriffssteuerung - Sicherstellen, dass nur autorisierte Personen Zugriff auf Ressourcen haben und dass Rollen und Berechtigungen manipulationssicher gespeichert werden.\n",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 111,
@@ -1590,7 +1591,7 @@
                   "severity": "Medium",
                   "type": "Tampering",
                   "description": "Ein Angreifer könnte versuchen, den OTT-Dienst zu manipulieren, um die Ausgabe des OTT-Codes zu verändern oder zu manipulieren, bevor dieser an den Benutzer gesendet wird\n\nCAPEC-137: Parameter Injection -- Ermöglicht es Angreifern, Eingaben zu manipulieren, um unerlaubte Befehle auszuführen oder auf geschützte Daten zuzugreifen.\n\nMITRE: T1437.001 - - Application Layer Protocol: Web Protocols --  Angreifer nutzen Standard-Webprotokolle, um bösartige Kommunikation unauffällig einzuschleusen\n\nD:  5/ R:  2/ E:  8/ A:  2/ DREA: 17\n",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Validierung der Eingaben und Parameter: Der OTT-Dienst sollte strikte Überprüfungen und Validierungen aller eingehenden Parameter anwenden, um sicherzustellen, dass sie nicht modifiziert wurden oder unerwartete Werte enthalten.\n\nOWASP ASVS V5.1 Eingabeprüfung -- Empfohlen zur Verhinderung von Injections",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 114,
@@ -1641,7 +1642,7 @@
                   "severity": "Medium",
                   "type": "Information disclosure",
                   "description": "Ein Angreifer könnte unbefugten Zugang zu den monatlich erstellten Exportberichten erhalten und dadurch Zugriff auf sensible Unternehmensdaten gewinnen.\n\nCAPEC-118: Collect and Analyze Information -- Angreifer verschaffen sich Zugriff auf sensible Daten, indem sie Datenübertragungen oder Speichersysteme ausnutzen, die unzureichend gesichert sind.\n\nMITRE: T1115 - Clipboard Data -- Angreifer kann ohne Rechte in der Zwischenablage Berichte einsehen.\nD: 3 / R:  9/ E: 2 / A:  1/ DREA: 15",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Verschlüsselung der Berichte – Speicherung und Übertragung der Exportberichte nur in verschlüsselter Form, um unbefugte Zugriffe zu verhindern.\nZugangskontrolle für sensible Berichte – Einschränkung des Zugriffs auf die Exportberichte auf autorisierte Personen und sichere Authentifizierung.\n\nOWASP ASVS V9.2 - Sicherstellung der Serverkommunikation, das sensible Daten während der Übertragung und Speicherung verschlüsselt sind.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 113,
@@ -1653,7 +1654,7 @@
           {
             "position": {
               "x": 75,
-              "y": -274
+              "y": -270
             },
             "size": {
               "width": 130,
@@ -1692,7 +1693,7 @@
                   "severity": "Medium",
                   "type": "Elevation of privilege",
                   "description": "Wenn die Überwachungssysteme nicht richtig gesichert sind oder fehlerhafte Autorisierungsprüfungen haben, könnten Angreifer möglicherweise auf vertrauliche Berichte zugreifen oder Alarmmeldungen deaktivieren.\n\nCAPEC-233: Privilege Escalation -- Angreifer nutzen Schwächen in Autorisierungsprüfungen, um höhere Berechtigungen zu erlangen und unautorisierten Zugriff auf sensible Funktionen oder Daten zu erhalten.\n\nMITRE T212/T1068 --  Angreifer nutzen Schwächen in Autorisierungsmechanismen aus, um sich höhere Berechtigungen zu verschaffen, was zum unbefugten Zugriff auf vertrauliche Daten oder die Manipulation von Alarmfunktionen führen kann.\nD:  8/ R:  8/ E:  3/ A:  1/ DREA: 20",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Rollenbasierte Zugriffskontrolle (RBAC) – Einrichtung einer fein abgestuften Zugriffskontrolle zur Begrenzung des Zugriffs auf vertrauliche Funktionen.\n\nOWASP ASVS V4.1 - Design der Allgemeinen Zugriffssteuerung - Implementierung einer rollenbasierten Zugriffskontrolle zur Begrenzung des Zugriffs auf sensible Funktionen.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 106,
