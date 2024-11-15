@@ -67,8 +67,8 @@
                 "text": "Login System -\nWebapp +\nMobile App"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -100,7 +100,7 @@
                 {
                   "id": "eb6ddb77-36e0-4524-b4d6-eb63cfc805a5",
                   "title": "Claims to have not received",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Low",
                   "type": "Repudiation",
                   "description": "Ein Benutzer behaupten könnte, den OTT nicht erhalten zu haben. \n\nCAPEC-216 - \"Communication Channel Manipulation\" - Bezug auf die Möglichkeit, OTT abzufangen oder zu manipulieren.\n\nMITRE: T1078 -- Tactic \"Defense Evasion\" und Technique \"T1078\" - Valid Accounts (sich als legitimer Nutzer ausgeben, z.B. durch das Behaupten, keinen OTT erhalten zu haben).\n\nD: 3 / R: 9 / E:  2/ A:  1/ DREA: 15",
@@ -111,7 +111,7 @@
                   "score": "6"
                 }
               ],
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isWebApplication": null,
               "handlesCardPayment": null,
               "handlesGoodsOrServices": null
@@ -131,8 +131,8 @@
                 "text": "2-Faktor-Authe\nntifizierungsdi\nenst"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -151,7 +151,7 @@
                 {
                   "id": "7e2b9559-ac62-462f-abe2-bf6987459450",
                   "title": "Spoofing von Nutzeridentitäten",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Low",
                   "type": "Spoofing",
                   "description": "Ein Angreifer könnte sich als legitimer Benutzer ausgeben und versuchen, den OTT (One-Time Token) abzufangen oder zu erraten, um Zugang zu einem Konto zu erhalten.\n\nCAPEC-151: Identity Spoofing - Ermöglicht es Angreifern, die Identität eines anderen Nutzers vorzutäuschen, um auf Ressourcen oder Daten zuzugreifen, zu denen sie ansonsten keinen Zugriff hätten.\n\nMITRE:  T1078 - Valid Accounts -- Angreifer nutzt legitime Anmelde Daten um sich als Nutzer auszugeben, um Zugang zu einem Konto zu erahlten.\n\nD:  10/ R: 2/ E: 7 / A:  2/ DREA: 21 ",
@@ -162,7 +162,7 @@
                   "score": "12"
                 }
               ],
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isBidirectional": false,
               "protocol": "",
               "isEncrypted": false,
@@ -1341,8 +1341,7 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1362,7 +1361,7 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
@@ -1371,7 +1370,7 @@
                 {
                   "id": "2af521a3-ebc4-4d2d-a996-eb6438717755",
                   "title": "Modifies redirects in webapp",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Low",
                   "type": "Tampering",
                   "description": "Ein Angreifer könnte manipulierte Weiterleitungen in der Webanwendung einfügen, um Benutzer auf schädliche Seiten umzuleiten\n\nCAPEC-34 - \"HTTP Response Splitting\" (könnte verwendet werden, um die Weiterleitungen zu manipulieren).\n\nMIRE: T1437.001 Application Layer Protocol: Web Protocols Angreifer können Webprotokolle wie HTTP und HTTPS verwenden, um unerkannt mit Geräten zu kommunizieren, indem sie den legitimen Datenverkehr nachahmen und so der Erkennung entgehen.\n\nD: 10 / R:  2/ E:  7/ A:  2/ DREA: 21",
@@ -1430,13 +1429,11 @@
                 "text": "Log-DB"
               },
               "topLine": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -1454,12 +1451,12 @@
               "storesCredentials": false,
               "isEncrypted": true,
               "isSigned": true,
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "threats": [
                 {
                   "id": "108836a4-b628-485f-82a5-e7554b553be1",
                   "title": "Data Stores ",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Information disclosure",
                   "description": "Ein Angreifer könnte hier versuchen, durch schwache Datenbankberechtigungen oder fehlende Verschlüsselung Informationen zu extrahieren. Maßnahmen umfassen verschlüsselte Speicherung und eingeschränkte Zugriffskontrollen.\n\nCAPEC-122: Privilege Abuse -- Angreifer nutzen schwache Berechtigungen oder unzureichende Zugriffskontrollen aus, um unautorisiert auf sensible Daten zuzugreifen.\n\nMitre: T1555 - Credentials from Password Stores -- Angreifer versuchen auf ungeschützt oder schwach geschütze Datenbanken zuzugreifen um Daten zu extrahieren.\n\nD: 5 / R: 10 / E: 4 / A: 10 / DREA: 29",
@@ -1569,8 +1566,8 @@
                 "text": "Allsecure Mobile Phone OTT Service"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -1584,7 +1581,7 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
@@ -1593,7 +1590,7 @@
                 {
                   "id": "c99a4f44-fe1b-455f-9138-8fac5ae1210c",
                   "title": "Manipulation des OTT Codes",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Low",
                   "type": "Tampering",
                   "description": "Ein Angreifer könnte versuchen, den OTT-Dienst zu manipulieren, um die Ausgabe des OTT-Codes zu verändern oder zu manipulieren, bevor dieser an den Benutzer gesendet wird\n\nCAPEC-137: Parameter Injection -- Ermöglicht es Angreifern, Eingaben zu manipulieren, um unerlaubte Befehle auszuführen oder auf geschützte Daten zuzugreifen.\n\nMITRE: T1437.001 - - Application Layer Protocol: Web Protocols --  Angreifer nutzen Standard-Webprotokolle, um bösartige Kommunikation unauffällig einzuschleusen\n\nD:  5/ R:  7/ E:  8/ A:  7/ DREA: 27",
@@ -1620,8 +1617,8 @@
                 "text": "Management-Repor signieren"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -1635,7 +1632,7 @@
               "description": "Export-Prozess ",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
@@ -1644,7 +1641,7 @@
                 {
                   "id": "e16b2562-7da6-4c4d-9259-ae3e3da4288f",
                   "title": "Informationsdiebstahl",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Low",
                   "type": "Information disclosure",
                   "description": "Ein Angreifer könnte unbefugten Zugang zu den monatlich erstellten Exportberichten erhalten und dadurch Zugriff auf sensible Unternehmensdaten gewinnen.\n\nCAPEC-118: Collect and Analyze Information -- Angreifer verschaffen sich Zugriff auf sensible Daten, indem sie Datenübertragungen oder Speichersysteme ausnutzen, die unzureichend gesichert sind.\n\nMITRE: T1115 - Clipboard Data -- Angreifer kann ohne Rechte in der Zwischenablage Berichte einsehen.\nD: 3 / R:  9/ E: 2 / A:  1/ DREA: 15",
@@ -1660,7 +1657,7 @@
           {
             "position": {
               "x": 75,
-              "y": -270
+              "y": -255
             },
             "size": {
               "width": 130,
@@ -1671,8 +1668,8 @@
                 "text": "SIEM-System "
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -1686,7 +1683,7 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
@@ -1695,7 +1692,7 @@
                 {
                   "id": "be0f6ff5-f46d-44ba-986c-faf482ecb3b3",
                   "title": "Buggy Authorization Checks",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Low",
                   "type": "Elevation of privilege",
                   "description": "Wenn die Überwachungssysteme nicht richtig gesichert sind oder fehlerhafte Autorisierungsprüfungen haben, könnten Angreifer möglicherweise auf vertrauliche Berichte zugreifen oder Alarmmeldungen deaktivieren.\n\nCAPEC-233: Privilege Escalation -- Angreifer nutzen Schwächen in Autorisierungsprüfungen, um höhere Berechtigungen zu erlangen und unautorisierten Zugriff auf sensible Funktionen oder Daten zu erhalten.\n\nMITRE T212/T1068 --  Angreifer nutzen Schwächen in Autorisierungsmechanismen aus, um sich höhere Berechtigungen zu verschaffen, was zum unbefugten Zugriff auf vertrauliche Daten oder die Manipulation von Alarmfunktionen führen kann.\nD:  8/ R:  8/ E:  3/ A:  1/ DREA: 20",
@@ -1739,7 +1736,21 @@
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "545a0d19-f71b-4095-91c4-9b1890740d64",
+                  "title": "Fake email to get acces to data",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "CAPEC-98: Phishing -- Angreifer Täuscht vertrauenwürdige EMail vor\n\nMITRE: DS0021 - Persona: Täuscht jemand anderes vor zu sein\n\nD 8 R 10 E 6 A 10 DREA: 34",
+                  "mitigation": "Mitarbeiter Schulen und eventuelles EMail Filtering durchführen\n\nMITRE: D3-EF: Email Filtering -- Spam Filter und fake Signaturen raus filtern\n\nD 8 R 6 E 6 A 10 DREA: 30",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 120,
+                  "score": "30"
+                }
+              ]
             }
           }
         ],
@@ -1752,7 +1763,7 @@
     ],
     "reviewer": "Georg Neugebauer",
     "diagramTop": 10,
-    "threatTop": 119
+    "threatTop": 120
   },
   "version": "2.1.1"
 }
